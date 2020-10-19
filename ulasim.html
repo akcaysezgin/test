@@ -1,0 +1,219 @@
+<div data-role="view" data-title="Ulaşım" data-layout="mobile-view"  data-stretch="true">
+    <header data-role="header">
+        <div data-role="navbar">
+            <a data-align="left" data-icon="arrow-w" data-role="backbutton" class="back-button"></a>
+            <span data-role="view-title"></span>
+            <a data-align="right" data-icon="source-code" data-click="goToSourceCode" data-role="button" title="Show this demo source code"></a>
+        </div>
+    </header>       
+
+    
+        <div class="">
+            <div class="col-12">
+              
+<div class="container p-3">
+    <input id="dropdownlist"  style="width: 100%;" />
+
+       
+    <input class="" id="dropdownlistSub"  style="width: 100%; display: none; padding-top: 10px;" />
+</div>
+     </div>
+
+
+            <div class="">
+   
+                <div id="app">
+
+                  
+                </div>
+
+            </div>
+        </div>
+   
+   
+
+
+
+    <script>
+
+function checkInternetConnection(){
+        var status = navigator.onLine;
+        if (status) {
+           console.log('İnternet Bağlantısı Mevcut');
+        } else {
+          $( "#app" ).load( "noconnect.html" );
+           console.log('İnternet Bağlantınızı Kontrol Ediniz');
+         
+
+        }  
+        
+      }
+      $( document ).ready(function() {
+        checkInternetConnection();
+});
+//calling above function
+
+
+
+ $( "#app" ).load( "maps/tramvay.html" );
+
+    $("#dropdownlist").kendoDropDownList({
+         change: onChange,
+         dataTextField: "name",
+         dataValueField: "expresID2",
+         serverFiltering: true,
+  dataSource: [
+    { name: "Tramvay",expresID2:"11" },
+    { name: "Expres(E)",expresID2:"10"},
+    {name:"Ring", expresID2:"13"},
+    {name:"Terminal",expresID2:"12"}
+   
+  ],
+  change: function(e) {
+   $("#dropdownlistSub").css("display:block;")
+                var expresList = $("#dropdownlistSub").kendoDropDownList({
+                    autoBind: false,  
+                    cascadeFrom: "dropdownlist",                  
+                    optionLabel: "Hat Seç",
+                    dataTextField: "name",
+                    dataValueField: "expresID2",
+                    serverFiltering: true,
+                    dataSource: [
+                          { name: "E1",expresID2:"10" },                       
+                       {name:"E3",expresID2:"10"},
+                        {name:"E4",expresID2:"10"},
+                        {name:"E5",expresID2:"10"},
+                        {name:"E7",expresID2:"10"},                        
+                        {name:"12/17 Nolu Hat",expresID2:"10"},
+                        {name:"14 Nolu Hat",expresID2:"10"},
+                        {name:"15/17 Nolu Hat",expresID2:"10"},
+                        {name:"20 Nolu Hat",expresID2:"10"},
+                        { name: "R4",expresID2:"13" },                       
+                        {name:"R5",expresID2:"13"},
+                        {name:"R6B",expresID2:"13"},
+                        {name:"R6T",expresID2:"13"},
+                        {name:"R7",expresID2:"13"},                        
+                        {name:"R8",expresID2:"13"},
+                        {name:"R9",expresID2:"13"},
+                        {name:"R10",expresID2:"13"},
+                        {name:"R12",expresID2:"13"},
+                        {name:"R13",expresID2:"13"},
+                        {name:"R21",expresID2:"13"},
+                        {name:"R22",expresID2:"13"},
+                        {name:"R25",expresID2:"13"},
+                        {name:"R26-R27",expresID2:"13"},
+                        {name:"R28",expresID2:"13"},
+                        {name:"R43",expresID2:"13"}
+                        
+                        
+                       ]
+                }).data("kendoDropDownList");
+
+              
+            }
+ 
+
+
+  
+});
+
+
+
+
+
+function onChange(e) {
+                var orders = $("#dropdownlistSub").data("kendoDropDownList");
+                orders.value("");
+                
+                if (e.sender.value() == "") {
+                    orders.enable(false);
+                }
+                else {
+                    orders.enable(true);
+                    
+                }
+            };
+  $('#dropdownlist').change(function(){
+    
+    
+  if($('#dropdownlist').data("kendoDropDownList").text() == 'Tramvay'){
+    $( "#app" ).load( "maps/tramvay.html" );   }
+  else{
+      console.log($('#dropdownlist').data("kendoDropDownList").text())
+  }
+});
+
+
+
+$('#dropdownlistSub').change(function(){
+  if($('#dropdownlistSub').data("kendoDropDownList").text() == 'E1'){
+    $( "#app" ).load( "maps/expres/e1.html" );  }  
+  if($('#dropdownlistSub').data("kendoDropDownList").text() == 'E3'){
+    $( "#app" ).load( "maps/expres/e3.html" );  }
+  if($('#dropdownlistSub').data("kendoDropDownList").text() == 'E4'){
+    $( "#app" ).load( "maps/expres/e4.html" );  }
+  if($('#dropdownlistSub').data("kendoDropDownList").text() == 'E5'){
+    $( "#app" ).load( "maps/expres/e5.html" );  }
+  if($('#dropdownlistSub').data("kendoDropDownList").text() == 'E7'){
+    $( "#app" ).load( "maps/expres/e7.html" );  }
+  if($('#dropdownlistSub').data("kendoDropDownList").text() == '12/17 Nolu Hat'){
+    $( "#app" ).load( "maps/expres/12-17.html" );  }
+  if($('#dropdownlistSub').data("kendoDropDownList").text() == '14 Nolu Hat'){
+    $( "#app" ).load( "maps/expres/14.html" );  }
+  if($('#dropdownlistSub').data("kendoDropDownList").text() == '15/17 Nolu Hat'){
+    $( "#app" ).load( "maps/expres/15-17.html" );  }
+    if($('#dropdownlistSub').data("kendoDropDownList").text() == '20 Nolu Hat'){
+    $( "#app" ).load( "maps/expres/20.html" );  }
+// ring //
+    if($('#dropdownlistSub').data("kendoDropDownList").text() == 'R4'){
+    $( "#app" ).load( "maps/expres/20.html" );  }
+    if($('#dropdownlistSub').data("kendoDropDownList").text() == 'R5'){
+    $( "#app" ).load( "maps/ring/r5.html" );  }
+    if($('#dropdownlistSub').data("kendoDropDownList").text() == 'R6B'){
+    $( "#app" ).load( "maps/ring/r6b.html" );  }
+    if($('#dropdownlistSub').data("kendoDropDownList").text() == 'R6T'){
+    $( "#app" ).load( "maps/ring/r6t.html" );  }
+    if($('#dropdownlistSub').data("kendoDropDownList").text() == 'R7'){
+    $( "#app" ).load( "maps/ring/r7.html" );  }
+    if($('#dropdownlistSub').data("kendoDropDownList").text() == 'R8'){
+    $( "#app" ).load( "maps/ring/r8.html" );  }
+    if($('#dropdownlistSub').data("kendoDropDownList").text() == 'R9'){
+    $( "#app" ).load( "maps/ring/r9.html" );  }
+    if($('#dropdownlistSub').data("kendoDropDownList").text() == 'R10'){
+    $( "#app" ).load( "maps/ring/r10.html" );  }
+    if($('#dropdownlistSub').data("kendoDropDownList").text() == 'R12'){
+    $( "#app" ).load( "maps/ring/r12.html" );  }
+    if($('#dropdownlistSub').data("kendoDropDownList").text() == 'R13'){
+    $( "#app" ).load( "maps/expres/20.html" );  }
+    if($('#dropdownlistSub').data("kendoDropDownList").text() == 'R21'){
+    $( "#app" ).load( "maps/ring/r21.html" );  }
+    if($('#dropdownlistSub').data("kendoDropDownList").text() == 'R22'){
+    $( "#app" ).load( "maps/ring/r22.html" );  }
+    if($('#dropdownlistSub').data("kendoDropDownList").text() == 'R25'){
+    $( "#app" ).load( "maps/ring/r25.html" );  }
+    if($('#dropdownlistSub').data("kendoDropDownList").text() == 'R26-R27'){
+    $( "#app" ).load( "maps/ring/.r26-r27.htl" );  }
+    if($('#dropdownlistSub').data("kendoDropDownList").text() == 'R28'){
+    $( "#app" ).load( "maps/ring/r28.html" );  }
+    if($('#dropdownlistSub').data("kendoDropDownList").text() == 'R43'){
+    $( "#app" ).load( "maps/ring/r43.html" );  }
+
+    else{console.log($('#dropdownlistSub').data("kendoDropDownList").text()) }
+});
+</script>
+  
+
+    
+    <div data-role="layout" data-id="mobile-view" data-show="showDemoLayout">
+        <header data-role="header">
+            <div data-role="navbar">
+                <a class="nav-button" data-align="left" data-role="backbutton">Geri</a>
+                <span data-role="view-title"></span>
+                
+            </div>
+        </header>
+    </div>
+    
+    
+    </div>
+    

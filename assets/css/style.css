@@ -1,0 +1,129 @@
+.app-bg{
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+
+.app-imgtext{
+    background-color:#0e415180;
+}
+
+.app-imgpanel{
+    padding: 5px;
+    width: 100%;
+}
+
+.app-logo{
+   width: 80%;
+    text-align: center;
+    padding-left: 65px;
+}
+
+.app-imgslogan{
+    width: 80%;
+    text-align: center;
+    padding-left: 65px;
+}
+.app-imgslogan img{  width: 100%;}
+.app-search{
+    padding-top: 10px;
+}
+
+.app-imgtext{
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+.app-nav{
+    background-color:#ef7c00 ;
+   
+}
+.app-navitem{
+    width: 100%;
+}
+.app-navitemright{
+    width: 100%;
+    text-align: right;
+}
+
+.app-navitemcenter{
+    width: 100%;
+    text-align: center;
+}
+
+.app-imerkezi img{
+    width: 100%;
+}
+
+.app-searchbtn button i{
+    font-size: xx-small;
+
+ }
+.app-searchinput{
+    
+    width: 100%;
+    font-size: x-small;
+}
+
+.app-isocial{padding-bottom: 75px;}
+.app-imgresponsive{
+    width: 30%;
+}
+
+.app-navitemright img {
+    width: 80%;
+}
+
+.navbar-light2 .navbar-toggler {
+    color: rgb(255 255 255);
+    border-color: rgb(255 255 255);
+}
+
+.app-navtext{
+    color: white;
+}
+
+.km-root a:not(.k-button) {
+     color: white;
+}
+#news{
+    overflow: scroll;
+}
+#news2{
+    overflow: scroll;
+}
+#news3{
+    overflow: scroll;
+}
+#news4{
+    overflow: scroll;
+}
+#news5{
+    overflow: scroll;
+}
+
+.newsCardBody{
+       
+    position: relative;
+    background-color:#d23c3c;
+    margin-bottom: 10px;
+}
+
+.cardTitle{
+    color: white;
+    font-size: large;
+    font-weight: 500;
+    content: "";
+}
+.eventCardBody{
+       
+    position: relative;
+    background-color:#4d1f61;
+    margin-bottom: 10px;
+}
+.placeCardBody{
+       
+    position: relative;
+    background-color:#7775e8;
+    margin-bottom: 10px;
+}

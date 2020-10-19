@@ -1,0 +1,56 @@
+<div data-role="view" data-title="Mekanlar" data-layout="mobile-view"  data-stretch="true">
+    <header data-role="header">
+        <div data-role="navbar">
+            <a data-align="left" data-icon="arrow-w" data-role="backbutton" class="back-button"></a>
+            <span data-role="view-title"></span>
+            <a data-align="right" data-icon="source-code" data-click="goToSourceCode" data-role="button" title="Show this demo source code"></a>
+        </div>
+    </header>       
+                
+
+
+<div id="news3">
+
+
+</div>
+    
+            
+    <div data-role="layout" data-id="mobile-view" data-show="showDemoLayout">
+        <header data-role="header">
+            <div data-role="navbar">
+                <a class="nav-button" data-align="left" data-role="backbutton">Geri</a>
+                <span data-role="view-title"></span>
+                
+            </div>
+        </header>
+    </div>
+    
+    
+    </div>
+
+
+    <script>
+
+$( document ).ready(function() {
+
+
+    $.getJSON('https://api.samsun.com.tr/v1/place/list.php?limit=4', function(data) {
+        var text="";
+        for(var i=0 ; i<data['results'].length ; i++)
+        {
+           text +="<div class='card mb-md-0 '><img src='http://samsun.com.tr/images/noimage.jpg' class='w-100' alt='"+data['results'][i]['title']+"'> </div> <div class='card-body placeCardBody p-4 pl-md-0'><div class='row'><div class='col-6'><p class='card-title cardTitle' style=' color: white;font-size: large;font-weight: 500;'>"+data['results'][i]['title']+"</p></div> <div class='col-6'> <a id='urlal"+i+"' href='https://www.google.com/maps?q="+data['results'][i]['lat']+","+data['results'][i]['lng']+"' class='btn btn-sm bg-light' style='color:#333333' onClick='showEvent("+i+");'>Haritada Goster</a></div></div> <div class='row'><div class='col-12'> <p class='text-white'>Başlangıç : "+data['results'][i]['address']+"</div></div></div>";
+         
+
+         
+        } 
+       
+        $('#news3').html(text)
+        
+        });
+       
+
+        
+});
+
+
+        </script>

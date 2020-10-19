@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <base href="">
+    <style>html { font-size: 14px; font-family: Arial, Helvetica, sans-serif; }</style>
+    <title></title>
+    <link rel="stylesheet" href="node_modules/bootstrap/css/bootstrap.css">
+   
+    <link rel="stylesheet" href="node_modules/fontawesome-5-15/css/all.min.css">
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2020.3.915/styles/kendo.common.min.css" />
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2020.3.915/styles/kendo.default.min.css" />
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2020.3.915/styles/kendo.mobile.all.min.css" />
+    
+    <link rel="stylesheet" href="http://kendo.cdn.telerik.com/2017.1.118/styles/kendo.silver.min.css"/>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="node_modules/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2020.3.915/js/jquery.min.js"></script>
+    
+    
+    <script src="https://kendo.cdn.telerik.com/2020.3.915/js/kendo.all.min.js"></script>
+    
+    <script src="node_modules/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</head>
+<body>
+    <div data-role="view" data-title="Anasayfa">   
+   
+        <div data-role="layout" data-id="mobile-view" data-show="showDemoLayout">   
+            <header data-role="header">      
+                <div data-role="navbar">          
+                    <a class="nav-button" data-align="left" data-role="backbutton">Back</a>
+                     <span data-role="view-title"></span>            
+                    <a data-align="right" data-role="button" class="nav-button" data-icon="home" href="#/"></a>           
+                    <a data-align="right" data-icon="source-code" data-click="goToSourceCode" data-role="button" title="Show this demo source code"></a>       
+                </div>  
+            </header>
+        </div>
+    
+<main role="main" class="app-bg" style="    background-image: linear-gradient(180deg, rgb(71 215 251 / 63%) 0%, rgb(20 60 72 / 88%) 97%), url(assets/img/banner/bg.png);">
+
+        
+            <div class="app-row">
+            <div class="container-fluid app-container">
+              <div class="col-3"></div>
+               <div class="col-12 col-sm-12 col-md-12 col-xl-12  mx-auto">
+                  <img class="app-logo" src="assets/img/logo/logo.png" alt="Samsun Büyük Şeihr Belediyesi Logo">
+               </div>
+               <div class="col-3"></div>
+               <div class="col-12 col-sm-12 col-md-12 col-xl-12  mx-auto">
+                  <img class="app-imgslogan" src="assets/img/logo/title-headline.png" alt="slogan">      
+               </div>
+      
+               <div class="col-12 col-sm-12 col-md-12 col-xl-12 app-search">
+                  <div class="input-group mb-3 ">
+                      <div class="input-group-prepend app-searchbtn">
+                        <button class="btn btn-light" type="button" id="button-addon1"><i class="fa fa-search"></i></button>
+                      </div>
+                      <input type="text" class="form-control app-searchinput" placeholder="Eczane veya Vefat gibi" aria-label="" aria-describedby="button-addon1">
+                    </div>
+      
+               </div>
+                       
+            </div>
+      
+            <div class="container-fluid app-imgtext">               
+               <div class="row">                   
+                <div class="col-6 col-md-6 col-xl-6  border-top border-bottom border-right">
+                    <a href="#news.html">
+                        <img class="app-imgpanel" src="assets/img/icon/haber.png" alt="">
+                    </a>
+                </div>
+        
+                <div class="col-6 col-md-6 col-xl-6  border-top border-bottom">
+                 <a href="#announcement.html">
+                     <img class="app-imgpanel" src="assets/img/icon/duyuru.png" alt="">
+                 </a>
+                </div>
+        
+             <div class="col-6 col-md-6 col-xl-6   border-bottom border-right">
+                 <a href="#map.html" id="maps">
+                     <img class="app-imgpanel" src="assets/img/icon/cbs.png" alt="">
+                 </a>
+             </div>
+        
+             <div class="col-6 col-md-6 col-xl-6  border-bottom">
+                 <a href="#eczane.html">
+                     <img class="app-imgpanel" src="assets/img/icon/eczane.png" alt="">
+                 </a>
+             </div>
+        
+             <div class="col-6 col-md-6 col-xl-6  border-bottom border-right">
+                 <a href="#ulasim.html">
+                     <img class="app-imgpanel" src="assets/img/icon/ulasim.png" alt="">
+                 </a>
+             </div>
+        
+             <div class="col-6 col-md-6 col-xl-6  border-bottom">
+                 <a href="#cekgonder.html">
+                     <img class="app-imgpanel" src="assets/img/icon/cekgonder.png" alt="">
+                 </a>
+             </div>
+      
+             <div class="col-6 col-md-6 col-xl-6  border-bottom border-right">
+              <a href="#event.html">
+                  <img class="app-imgpanel" src="assets/img/icon/event.png" alt="">
+              </a>
+          </div>
+      
+          <div class="col-6 col-md-6 col-xl-6  border-bottom">
+              <a href="#place.html">
+                  <img class="app-imgpanel" src="assets/img/icon/place.png" alt="">
+              </a>
+          </div>      
+          </div>      
+        </div>
+      
+          <div class="container-fluid app-isocial">
+              <div class="row">
+              <div class="col-6 col-md-6 col-xl-6 app-imerkezi">
+                  <a href="">
+                      <img src="assets/img/icon/iltisimmerkezi.png" alt="">
+                  </a>
+              </div>
+      
+              <div class="col-6 col-md-6 col-xl-6 app-imerkezi">
+                  <a href="">
+                      <img src="assets/img/icon/social.png" alt="">
+                  </a>
+              </div>
+              </div>
+          </div>
+      
+          <div class="app-nav fixed-bottom">
+              <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-9 col-md-9 col-xl-9 app-navitem">
+                        <div class="pos-f-t">
+                            <div class="collapse" id="navbarToggleExternalContent">
+                              <div class="p-4">
+                                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                                    <li class="nav-item active">
+                                      <a class="nav-link app-navtext" href="#">Haberler<span class="sr-only">(current)</span></a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a class="nav-link app-navtext" href="#">Duyurular</a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a class="nav-link app-navtext" href="#">CBS</a>
+                                      </li>
+
+                                      <li class="nav-item">
+                                        <a class="nav-link app-navtext" href="#">Ulaşım</a>
+                                      </li>
+
+                                      <li class="nav-item">
+                                        <a class="app-navtext" href="#">Projeler</a>
+                                      </li>
+                                   
+                                  </ul>
+                              </div>
+                            </div>
+                            <nav class="navbar  navbar-light2">
+                              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+                              </button>
+                            </nav>
+                          </div>
+                      </div>
+
+                      <div class="col-3 col-md-3 col-xl-3 app-navitemright">
+                        <a href="">
+                            <img class="app-imgresponsive" src="assets/img/icon/home.png" alt="">
+                        </a>
+                    </div>
+            
+          </div>
+         </div>
+        </div>
+    </main>  
+    </div>
+        <script>
+            var app = new kendo.mobile.Application(document.body, { skin: "nova" }); 
+      
+
+            function showDiv(pageid){
+            
+              
+  
+            var res =pageid;
+            
+            
+            $.getJSON('https://api.samsun.com.tr/v1/news/list.php?limit=4', function(data) {
+                    var text="";
+                    
+                       text ="<div class='card mb-md-0 '><img src='https://cbs.samsun.bel.tr/"+data['results'][res]['image_directory']+"/"+data['results'][res]['image_url']+"' class='w-100' alt='"+data['results'][res]['title']+"'> </div> <div class='card-body position-static p-4 pl-md-0'><p style='font-size: x-large;font-weight: bold; color: #666d98;'>"+data['results'][res]['title']+"</p><div class='row'><div class='col-6'> <p class='text-muted'>"+data['results'][res]['dt']+"</p></div><div class='col-12' style='padding-top:10px'>"+data['results'][res]['description']+" </div></div></div>";
+                     
+                    $('#news2').html(text)
+                   
+                    });
+                }
+
+         function showEvent(pageid){
+            
+              
+  
+            var res =pageid;
+            
+            
+            $.getJSON('https://api.samsun.com.tr/v1/event/list.php?limit=4', function(data) {
+                    var text="";
+                    
+                       text ="<div class='card mb-md-0 '><img src='"+data['results'][res]['image_url']+"' class='w-100' alt='"+data['results'][res]['title']+"'> </div> <div class='card-body position-static p-4 pl-md-0'><p style='font-size: x-large;font-weight: bold; color: #666d98;'>"+data['results'][res]['title']+"</p><div class='row'><div class='col-6'> <p class='text-muted'>Başlangıç : "+data['results'][res]['start_date']+"</p></div><div class='col-6'> <p class='text-muted'>Bitiş : "+data['results'][res]['end_date']+"</p></div><div class='col-12' style='padding-top:10px'>"+ data['results'][res]['description']+"</div></div></div>";
+                     
+                    $('#news5').html(text)
+                   
+                    });
+                }
+
+
+                function showPlace(pageid){
+            
+              
+  
+            var res =pageid;
+            
+            
+            $.getJSON('https://api.samsun.com.tr/v1/place/list.php?limit=4', function(data) {
+                    var text="";
+                    
+                       text ="<div class='card mb-md-0 '><img src='"+data['results'][res]['image_url']+"' class='w-100' alt='"+data['results'][res]['title']+"'> </div> <div class='card-body position-static p-4 pl-md-0'><h5 class='card-title'>"+data['results'][res]['title']+"</h5><div class='row'><div class='col-6'> <p class='text-muted'>Başlangıç : "+data['results'][res]['start_date']+"</p></div><div class='col-6'> <p class='text-muted'>Bitiş : "+data['results'][res]['end_date']+"</p></div><div class='col-12'>"+data['results'][res]['description']+" </div></div></div>";
+                     
+                    $('#news2').html(text)
+                   
+                    });
+                }
+        </script>
+</body>
+</html>

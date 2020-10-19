@@ -1,0 +1,56 @@
+<div data-role="view" data-title="Haberler" data-layout="mobile-view"  data-stretch="true">
+    <header data-role="header">
+        <div data-role="navbar">
+            <a data-align="left" data-icon="arrow-w" data-role="backbutton" class="back-button"></a>
+            <span data-role="view-title"></span>
+            <a data-align="right" data-icon="source-code" data-click="goToSourceCode" data-role="button" title="Show this demo source code"></a>
+        </div>
+    </header>       
+                
+
+
+<div id="news">
+
+
+</div>
+    
+            
+    <div data-role="layout" data-id="mobile-view" data-show="showDemoLayout">
+        <header data-role="header">
+            <div data-role="navbar">
+                <a class="nav-button" data-align="left" data-role="backbutton">Geri</a>
+                <span data-role="view-title"></span>
+                
+            </div>
+        </header>
+    </div>
+    
+    
+    </div>
+
+
+    <script>
+
+$( document ).ready(function() {
+
+
+    $.getJSON('https://api.samsun.com.tr/v1/news/list.php?limit=4', function(data) {
+        var text="";
+        for(var i=0 ; i<data['results'].length ; i++)
+        {
+           text +="<div class='card mb-md-0 '><img src='https://cbs.samsun.bel.tr/"+data['results'][i]['image_directory']+"/"+data['results'][i]['image_url']+"' class='w-100' alt='"+data['results'][i]['title']+"'> </div> <div class='card-body  p-4 pl-md-0 newsCardBody'><p class='card-title cardTitle' style=' color: white;font-size: large;font-weight: 500;'>"+data['results'][i]['title']+"</p><div class='row'><div class='col-6'> <p class='text-white'>"+data['results'][i]['dt']+"</p></div><div class='col-6'> <a id='urlal"+i+"' href='#news-detail.html?id="+i+"' class='btn btn-sm btn-light' style='color:#333333;' onClick='showDiv("+i+");'>Haber Detay</a></div></div></div>";
+         
+
+         
+        } 
+       
+        $('#news').html(text)
+        
+        });
+       
+
+        
+});
+
+
+        </script>
